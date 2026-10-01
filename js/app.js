@@ -1,6 +1,5 @@
 import { initializeEventDelegation } from './events.js';
 import { initializeInputMasks } from './masks.js';
-import { initializeModal } from './modal.js';
 import { renderRoute } from './router.js';
 import { renderProjetosCards } from './templates.js';
 
@@ -19,8 +18,6 @@ function initializeApp() {
     if (route === '#cadastro') {
       initializeInputMasks();
     }
-
-    initializeModal();
   }
 
   window.addEventListener('route:rendered', (event) => {

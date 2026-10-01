@@ -311,12 +311,6 @@ header {
     gap: var(--espaco-2);
 }
 
-.menu-toggle {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
 .menu-hamburguer {
     display: inline-flex;
     align-items: center;
@@ -326,7 +320,30 @@ header {
     background-color: var(--cor-primaria);
     color: var(--cor-superficie);
     border-radius: 0.4rem;
+    border: 0;
     cursor: pointer;
+    font: inherit;
+}
+
+.contrast-toggle {
+    width: max-content;
+    padding: var(--espaco-1) var(--espaco-2);
+    color: var(--cor-primaria);
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font: inherit;
+}
+
+.contrast-toggle:hover {
+    color: var(--cor-superficie);
+    background-color: var(--cor-primaria);
+}
+
+.contrast-toggle:focus-visible {
+    outline: 3px solid var(--cor-primaria-clara);
+    outline-offset: 3px;
 }
 
 .menu-principal {
@@ -341,7 +358,7 @@ header {
     transition: max-height 0.4s ease-in-out, opacity 0.25s ease-in-out, visibility 0s linear 0.4s;
 }
 
-.menu-toggle:checked+.menu-hamburguer+.menu-principal {
+.menu-principal.is-open {
     max-height: 30rem;
     opacity: 1;
     visibility: visible;
@@ -494,7 +511,7 @@ form button:disabled {
 }
 
 @media (max-width: 767px) {
-    .menu-toggle:focus-visible+.menu-hamburguer {
+    .menu-hamburguer:focus-visible {
         outline: 3px solid var(--cor-primaria-escura);
         outline-offset: 3px;
     }
@@ -604,4 +621,65 @@ form button:disabled {
     main {
         max-width: 1320px;
     }
+}
+
+:root.high-contrast {
+    --cor-primaria: #FFFF00;
+    --cor-primaria-clara: #FFFF00;
+    --cor-primaria-escura: #FFFF00;
+    --cor-secundaria: #FFFF00;
+    --cor-secundaria-clara: #FFFF00;
+    --cor-sucesso: #3DFF88;
+    --cor-sucesso-fundo: #00381E;
+    --cor-aviso: #FFE066;
+    --cor-aviso-fundo: #332900;
+    --cor-erro: #FF8080;
+    --cor-erro-fundo: #3D0000;
+    --cor-informacao: #66D9FF;
+    --cor-informacao-fundo: #002B40;
+    --cor-fundo: #000000;
+    --cor-superficie: #111111;
+    --cor-texto: #FFFFFF;
+    --cor-texto-suave: #FFFFFF;
+    --cor-borda: #FFFFFF;
+}
+
+.high-contrast a {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.15em;
+}
+
+.high-contrast .menu-hamburguer,
+.high-contrast .modal-trigger,
+.high-contrast .modal__close,
+.high-contrast form button {
+    color: #000000;
+    background-color: #FFFF00;
+    border-color: #FFFF00;
+}
+
+.high-contrast form button:hover:not(:disabled) {
+    color: #000000;
+    background-color: #FFFF00;
+    border-color: #FFFF00;
+}
+
+.high-contrast form input {
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.high-contrast a:focus-visible {
+    outline: 3px solid var(--cor-primaria-clara);
+    outline-offset: 3px;
+}
+
+.high-contrast form button:disabled {
+    opacity: 1;
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+    border-color: var(--cor-borda);
 }

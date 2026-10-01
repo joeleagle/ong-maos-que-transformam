@@ -1,0 +1,13 @@
+{
+  "name": "ong-maos-que-transformam",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^8.3.1"
+  }
+}

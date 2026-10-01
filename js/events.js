@@ -126,17 +126,20 @@ function updateFieldFeedback(field) {
     if (!messageElement) {
       const feedback = document.createElement('span');
       feedback.className = 'campo-feedback';
+      feedback.id = `${field.id}-error`;
       wrapper.appendChild(feedback);
     }
 
     wrapper.querySelector('.campo-feedback').textContent = message;
     wrapper.querySelector('.campo-feedback').hidden = false;
+    field.setAttribute('aria-describedby', `${field.id}-error`);
     return false;
   }
 
   field.classList.remove('campo-erro');
   field.classList.add('campo-sucesso');
   field.setAttribute('aria-invalid', 'false');
+  field.removeAttribute('aria-describedby');
 
   if (messageElement) {
     messageElement.textContent = '';

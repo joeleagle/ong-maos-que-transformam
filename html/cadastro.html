@@ -7,26 +7,26 @@
     <title>Cadastro | ONG Mãos que Transformam</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <script type="module" src="../js/menu.js"></script>
 </head>
 
 <body>
     <header>
         <h1>Cadastro</h1>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-        <label for="menu-toggle" class="menu-hamburguer">
+        <button type="button" class="menu-hamburguer" aria-controls="menu-principal" aria-expanded="false">
             ☰ Menu
-        </label>
+        </button>
+        <button type="button" class="contrast-toggle" aria-pressed="false">Alto contraste</button>
 
-        <nav class="menu-principal" aria-label="Navegação principal">
+        <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
             <a href="index.html">Início</a>
 
             <div class="projetos-menu">
                 <a href="projetos.html" class="projetos-link">Projetos</a>
 
                     <details class="item-dropdown">
-                        <summary aria-label="Abrir submenu de Projetos">▼</summary>
+                        <summary aria-label="Submenu de Projetos">▼</summary>
 
                         <div class="submenu">
                             <a href="projetos.html#voluntariado">Voluntariado</a>

@@ -8,26 +8,26 @@
 
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="../js/modal.js" defer></script>
+    <script type="module" src="../js/menu.js"></script>
 </head>
 
 <body>
     <header>
         <h1>Projetos Sociais</h1>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-        <label for="menu-toggle" class="menu-hamburguer">
+        <button type="button" class="menu-hamburguer" aria-controls="menu-principal" aria-expanded="false">
             ☰ Menu
-        </label>
+        </button>
+        <button type="button" class="contrast-toggle" aria-pressed="false">Alto contraste</button>
 
-        <nav class="menu-principal" aria-label="Navegação principal">
+        <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
             <a href="index.html">Início</a>
 
             <div class="projetos-menu">
                 <a href="projetos.html" class="projetos-link">Projetos</a>
 
                 <details class="item-dropdown">
-                    <summary aria-label="Abrir submenu de Projetos">▼</summary>
+                    <summary aria-label="Submenu de Projetos">▼</summary>
 
                     <div class="submenu">
                         <a href="projetos.html#voluntariado">Voluntariado</a>
@@ -67,7 +67,6 @@
             <p>As contribuições financeiras ajudam a manter os projetos e ampliar o atendimento da ONG.</p>
             <a href="cadastro.html">Quero contribuir</a>
         </section>
-    </main>
 
     <section class="feedback-examples" aria-labelledby="feedback-examples-title">
         <h2 id="feedback-examples-title">Mensagens do sistema</h2>
@@ -100,6 +99,7 @@
             </div>
         </dialog>
     </section>
+    </main>
 
     <aside class="toast" role="status" aria-live="polite" aria-atomic="true">
         <span class="toast__title">Notificação</span>

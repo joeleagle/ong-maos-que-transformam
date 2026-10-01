@@ -57,7 +57,10 @@ export const appTemplates = {
       <h2>Quem somos</h2>
       <p>Somos uma organização dedicada a transformar vidas através de projetos sociais sustentáveis.</p>
       <picture>
-        <source srcset="../imagens/acao-social.webp" type="image/webp">
+        <source
+          type="image/webp"
+          srcset="../imagens/acao-social-320.webp 320w, ../imagens/acao-social-600.webp 600w, ../imagens/acao-social-960.webp 960w"
+          sizes="(max-width: 479px) calc(100vw - 3rem), (max-width: 600px) calc(100vw - 2rem), 600px">
         <source srcset="../imagens/acao-social.jpg" type="image/jpeg">
         <img src="../imagens/acao-social.png"
           alt="Voluntarios distribuindo alimentos durante uma ação social na comunidade" width="600"
