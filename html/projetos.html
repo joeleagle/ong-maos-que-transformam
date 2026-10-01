@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | ONG Mãos que Transformam</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/modal.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Projetos Sociais</h1>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-hamburguer">
+            ☰ Menu
+        </label>
+
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">Início</a>
+
+            <div class="projetos-menu">
+                <a href="projetos.html" class="projetos-link">Projetos</a>
+
+                <details class="item-dropdown">
+                    <summary aria-label="Abrir submenu de Projetos">▼</summary>
+
+                    <div class="submenu">
+                        <a href="projetos.html#voluntariado">Voluntariado</a>
+                        <a href="projetos.html#campanhas">Campanhas de doação</a>
+                        <a href="projetos.html#contribuicao">Contribuição financeira</a>
+                    </div>
+                </details>
+            </div>
+
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <main class="projetos-grid">
+        <section id="voluntariado">
+            <span class="badge badge--voluntariado">Voluntariado</span>
+            <h2>Voluntariado</h2>
+            <p>Participe das ações da ONG oferecendo seu tempo e disposição para ajudar a transformar vidas. Faça seu
+                cadastro para demonstrar interesse em ser voluntário.</p>
+            <a href="cadastro.html">Quero ser voluntário</a>
+        </section>
+
+        <section id="campanhas">
+            <span class="badge badge--doacoes">Doações</span>
+            <h2>Campanhas de doação</h2>
+            <p>As campanhas de doação recebem itens que ajudam a atender às necessidades da comunidade.</p>
+            <ul>
+                <li>Alimentos não perecíveis</li>
+                <li>Roupas</li>
+                <li>Materiais de higiene</li>
+            </ul>
+        </section>
+
+        <section id="contribuicao">
+            <span class="badge badge--contribuicao">Contribuição</span>
+            <h2>Contribuição financeira</h2>
+            <p>As contribuições financeiras ajudam a manter os projetos e ampliar o atendimento da ONG.</p>
+            <a href="cadastro.html">Quero contribuir</a>
+        </section>
+    </main>
+
+    <section class="feedback-examples" aria-labelledby="feedback-examples-title">
+        <h2 id="feedback-examples-title">Mensagens do sistema</h2>
+        <div class="alert-list">
+            <article class="alert alert--success">
+                <h3 class="alert__title">Sucesso</h3>
+                <p>Exemplo de confirmação para uma ação concluída.</p>
+            </article>
+            <article class="alert alert--warning">
+                <h3 class="alert__title">Aviso</h3>
+                <p>Confira as informações antes de continuar.</p>
+            </article>
+            <article class="alert alert--error">
+                <h3 class="alert__title">Erro</h3>
+                <p>Não foi possível concluir a solicitação. Tente novamente.</p>
+            </article>
+            <article class="alert alert--info">
+                <h3 class="alert__title">Informação</h3>
+                <p>Novidades sobre os projetos serão exibidas aqui.</p>
+            </article>
+        </div>
+        <button class="modal-trigger" type="button" data-modal-open aria-haspopup="dialog"
+            aria-controls="feedback-modal">Abrir modal</button>
+
+        <dialog class="modal" id="feedback-modal" aria-labelledby="feedback-modal-title">
+            <div class="modal__content">
+                <h2 id="feedback-modal-title">Demonstração de modal</h2>
+                <p>Esta janela apresenta uma mensagem de exemplo sobre os projetos da ONG.</p>
+                <button class="modal__close" type="button" data-modal-close autofocus>Fechar</button>
+            </div>
+        </dialog>
+    </section>
+
+    <aside class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <span class="toast__title">Notificação</span>
+        <span>Exemplo de confirmação exibida sem interromper a navegação.</span>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 ONG Mãos que Transformam. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
